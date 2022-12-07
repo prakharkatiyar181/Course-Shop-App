@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile page</title>
+    <link rel="stylesheet" type="text/css" href="./css/profilepagestyles.css" />
+    <link rel="icon" href="icon.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script>function myFunction1() {
+
+    document.getElementById("myDIV1").style.display = "flex" ;
+
+    document.getElementById("myDIV2").style.display = "none";
+
+    document.getElementById("myDIV3").style.display = "none";
+
+    document.getElementById("myDIV4").style.display = "none";
+
+}
+
+function myFunction2() {
+
+  document.getElementById("myDIV1").style.display = "none";
+
+  document.getElementById("myDIV2").style.display = "flex";
+
+  document.getElementById("myDIV3").style.display = "none";
+
+  document.getElementById("myDIV4").style.display = "none";
+
+}
+
+function myFunction3() {
+
+  document.getElementById("myDIV1").style.display = "none";
+
+  document.getElementById("myDIV2").style.display = "none";
+
+  document.getElementById("myDIV3").style.display = "flex";
+
+  document.getElementById("myDIV4").style.display = "none";
+
+}
+
+function myFunction4() {
+
+  document.getElementById("myDIV1").style.display = "none" ;
+
+  document.getElementById("myDIV2").style.display = "none";
+
+  document.getElementById("myDIV3").style.display = "none";
+
+  document.getElementById("myDIV4").style.display = "flex";
+
+}</script>
+</head>
+
+<body>
+	<img class="wave" src="images/profilepageimg1.png">
+
+  <!-- Nav Bar -->
+
+  <nav class="navbar navbar-light nav " style="background-color: #32be8f;">
+    <div class="row">
+      <div class="col-1">
+        <img class="nav-img" src="images/profilepagebooks.png" alt="icon" width="70%">
+      </div>
+      <div class="col-11">
+        <a class="nav-link" href=""> Course Shop App</a>
+    </div>
+    </nav>
+
+    <!--left container-->
+    
+    <div class="left-container">
+      
+      <div class="heading">
+        <h2 class="left-container-heading">Account-Details</h2>
+      </div>
+      <div class="left-container-img">
+        <img class="left-container-img-img" src="./images/profilepageimg4.png" alt="logo">
+      </div>
+
+    <div class="container-buttons">
+      <div class="profile-button">
+        <button type="button" onclick="myFunction1()" class="profile-button-button"><i class="fas fa-user-circle"></i> Profile</button>
+      </div>
+      <div class="photo-button">
+        <button type="button" onclick="myFunction2()" class="photo-button-button"><i class="fas fa-id-card-alt"></i> Photo</button>
+      </div>
+      <div class="account-button">
+        <button type="button" onclick="myFunction3('myDIV3')" class="account-button-button"><i class="fas fa-id-card"></i> Account</button>
+      </div>
+      <div class="order-button">
+        <button type="button" onclick="myFunction4('myDIV4')" class="order-button-button"><i class="fas fa-shopping-cart"></i> Your Order</button>
+      </div>
+    </div>
+  </div>
+
+    <!--right container-->
+
+    <!-- Profile -->
+  <div class="right-container">
+    <div id="myDIV1">
+        <div class="right-container-profile">
+          <div class="right-container-firstname">
+        <h2>User Name :</h2>
+      </div>
+        <div class="profile-first-name">
+          <h3>{{name}}</h3>
+        </div>
+        <div class="right-container-description">
+        <h2>Description :</h2>
+      </div>
+        <div class="profile-description">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio a, quasi error dolorem quidem obcaecati natus harum, consectetur cupiditate sit consequuntur quae doloremque ea ratione reiciendis molestias voluptate magni facilis?</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Photo -->
+
+    <div id="myDIV2">
+    <div class="right-container-photo tab">
+      <div class="photo-name">
+        <h2>Profile Picture :</h2>
+      </div>
+    <div class="photo-img">
+      <img class="photo-img" src="images/profilepageimg3.png" alt="user">
+    </div>
+    
+    </div>
+    </div>
+
+    <!-- Account -->
+
+    <div id="myDIV3">
+    <div class="right-container-account tab">
+    <div class="username">
+    <h2>User Name :</h2>
+  </div>
+    <div class="account-username">
+      <h3>{{name}}</h3>
+    </div>
+    <div class="email">
+    <h2>Email Address :</h2>
+  </div>
+    <div class="account-email">
+      <h3>{{email}}</h3>
+    </div>
+  </div>
+  </div>
+
+  <!-- Your Order-->
+
+  <div id="myDIV4">
+    <div class="right-container-order tab">
+      <div class="header">
+        <h2>Your Order History</h2>
+      </div>
+      <div class="body">
+        <div class="card-columns">
+          <div class="card">
+            <img class="card-img-top" src="./images/profilepageimg5.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Web Development</h5>
+              <p class="card-text">This Course is Develop your understanding of web Development .</p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="./images/profilepageimg5.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Web Development</h5>
+              <p class="card-text">This Course is Develop your understanding of web Development .</p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="./images/profilepageimg5.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Web Development</h5>
+              <p class="card-text">This Course is Develop your understanding of web Development .</p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="./images/profilepageimg5.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Web Development</h5>
+              <p class="card-text">This Course is Develop your understanding of web Development .</p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="./images/profilepageimg5.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Web Development</h5>
+              <p class="card-text">This Course is Develop your understanding of web Development .</p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="./images/profilepageimg5.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Web Development</h5>
+              <p class="card-text">This Course is Develop your understanding of web Development .</p>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

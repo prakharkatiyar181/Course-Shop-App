@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup Form</title>
+	<link rel="stylesheet" type="text/css" href="css/signupstyles.css">
+	<link rel="icon" href="icon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>const inputs = document.querySelectorAll(".input");
+	function addcl(){
+		let parent = this.parentNode.parentNode;
+		parent.classList.add("focus");
+	}
+	function remcl(){
+		let parent = this.parentNode.parentNode;
+		if(this.value == ""){
+			parent.classList.remove("focus");
+		}
+	}
+
+
+	inputs.forEach(input => {
+	input.addEventListener("focus", addcl);
+	input.addEventListener("blur", remcl);
+	});</script>
+</head>
+<body>
+
+	<img class="wave" src="images/signupimg1.png">
+	<div class="container">
+		<div class="img">
+			<img src="images/signupimg2.svg">
+		</div>
+		<div class="Signup-content">
+			<form action="/signup" method="POST">
+				<img src="images/signupimg3.png">
+				<h2 class="title">Start Learning Today</h2>
+
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<input type="text" class="input" placeholder="Enter Username" name="username">
+           		   </div>
+           		</div>
+				   
+							<div class="input-div email">
+								 <div class="i">
+										<i class="fas fa-envelope"></i>
+								 </div>
+								 <div class="div">
+										<input type="email" class="input" placeholder="Enter Email" name="email">
+								 </div>
+							</div>
+           		<div class="input-div pass">
+           		   <div class="i">
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<input type="password" class="input" placeholder="Enter Password" name="password">
+            	   </div>
+            	</div>
+            	<input type="submit" class="btn" value="Signup">
+	            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../public/Js/Home.js"></script>
+</body>
+</html>
